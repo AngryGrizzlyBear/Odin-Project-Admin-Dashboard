@@ -7,9 +7,8 @@
 
 .sidebar {
     background-color: #34d399;
-    border: dotted green 4px;
-    grid-column: 1 / 3; /* Takes up the first two columns */
-    grid-row: 1 / -1;   /* Spans all rows */
+    grid-column: 1 / 3; 
+    grid-row: 1 / -1;   
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -31,47 +30,47 @@ li {
 }
 
 .header {
-    border: dotted blue 4px;
-    grid-column: 3 / -1; /* Header spans all columns */
-    grid-row: 1;         /* Placed in the first row */
+
+    grid-column: 3 / -1; 
+    grid-row: 1;         
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2, 1fr);
 }
 
 .header input[type="text"] {
-    border: 2px solid #007bff; /* Border color */
-    border-radius: 25px; /* Round corners */
-    padding: 10px 20px; /* Padding for a comfortable size */
-    width: 500px; /* Set width */
-    outline: none; /* Remove default outline */
-    margin-right: 10px; /* Space between input and button */
+    border: 2px solid #007bff; 
+    border-radius: 25px;
+    padding: 10px 20px; 
+    width: 500px; 
+    outline: none; 
+    margin-right: 10px; 
 }
 
 
 .button {
-    border: none;               /* Remove default border */
-    background-color: #007bff; /* Change background color */
-    color: white;              /* Change text color */
-    padding: 10px 20px;        /* Add padding */
-    border-radius: 50px;       /* Make the button round */
-    cursor: pointer;           /* Change cursor to pointer on hover */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    border: none;              
+    background-color: #007bff; 
+    color: white;              
+    padding: 10px 20px;        
+    border-radius: 50px;      
+    cursor: pointer;           
+    transition: background-color 0.3s; 
 }
 
 .button:hover {
-    background-color: #0056b3; /* Darker background on hover */
+    background-color: #0056b3; 
 }
 .header-group-1 {
-    grid-column: 1; /* Adjust as needed */
-    display: flex; /* Flexbox for better alignment */
-    align-items: center; /* Center vertically */
+    grid-column: 1;
+    display: flex;
+    align-items: center; 
 }
 
 .header-group-2 {
-    grid-column: 2; /* Adjust as needed */
-    display: flex; /* Flexbox for better alignment */
-    align-items: center; /* Center vertically */
+    grid-column: 2;
+    display: flex; 
+    align-items: center; 
     justify-content: space-around;
 }
 
@@ -115,32 +114,76 @@ justify-content: space-evenly;
 
 
 .profile-img {
-    width: 40px;               /* Set the width */
-    height: 40px;              /* Set the height */
-    border-radius: 50%;        /* Make it circular */
-    object-fit: cover;         /* Maintain aspect ratio */
-    margin-right: 10px;        /* Space between image and username */
+    width: 40px;               
+    height: 40px;            
+    border-radius: 50%;       
+    object-fit: cover;        
+    margin-right: 10px;       
 }
 
 
 .profile-img-bigger {
-    width: 80px;               /* Set the width */
-    height: 80px;              /* Set the height */
-    border-radius: 50%;        /* Make it circular */
-    object-fit: cover;         /* Maintain aspect ratio */
-    margin-right: 10px;        /* Space between image and username */
+    width: 80px;               
+    height: 80px;     
+    border-radius: 50%;       
+    object-fit: cover;         
+    margin-right: 10px;      
 }
 
 
-.content {
-    border: dotted purple 4px;
-    grid-column: 3;      /* Placed in the third column */
-    grid-row: 2 / -1;    /* Starts right below the header */
-}
 
 .icon {
-    width: 24px;  /* Set the width */
-    height: 24px; /* Set the height */
-    vertical-align: middle; /* Aligns the icon vertically with text */
-    margin-right: 8px; /* Space between the icon and text */
+    width: 24px; 
+    height: 24px; 
+    vertical-align: middle; 
+    margin-right: 8px;
 }
+
+.content {
+   BACKGROUND: #d1d5db;
+    grid-column: 3;      
+    grid-row: 2 / -1;    
+    display: grid;
+    grid-template-columns: repeat(2, 2fr) 1fr;
+    grid-template-rows: repeat(3 400pxpx);
+    gap: 20px;
+}
+
+.project-column {
+    grid-column: 1 / span 2;
+    grid-row: 1 /  3;
+}
+
+.project-column-two {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.shoutout {
+    grid-column-start: 3;
+    grid-row-start: 1 / 2;
+}
+
+.trending {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.card {
+    background-color: #fff;      
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;                
+    margin: 20px;                   
+    width: 300px;                   
+}
+
+.card-title {
+    font-size: 1.5em;             
+    margin: 0;           
+}
+
+.card-content {
+    font-size: 1em;                 
+    color: #555;                   
+}
+
