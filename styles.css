@@ -34,7 +34,103 @@ li {
     border: dotted blue 4px;
     grid-column: 3 / -1; /* Header spans all columns */
     grid-row: 1;         /* Placed in the first row */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
 }
+
+.header input[type="text"] {
+    border: 2px solid #007bff; /* Border color */
+    border-radius: 25px; /* Round corners */
+    padding: 10px 20px; /* Padding for a comfortable size */
+    width: 500px; /* Set width */
+    outline: none; /* Remove default outline */
+    margin-right: 10px; /* Space between input and button */
+}
+
+
+.button {
+    border: none;               /* Remove default border */
+    background-color: #007bff; /* Change background color */
+    color: white;              /* Change text color */
+    padding: 10px 20px;        /* Add padding */
+    border-radius: 50px;       /* Make the button round */
+    cursor: pointer;           /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+.header-group-1 {
+    grid-column: 1; /* Adjust as needed */
+    display: flex; /* Flexbox for better alignment */
+    align-items: center; /* Center vertically */
+}
+
+.header-group-2 {
+    grid-column: 2; /* Adjust as needed */
+    display: flex; /* Flexbox for better alignment */
+    align-items: center; /* Center vertically */
+    justify-content: space-around;
+}
+
+.header-group-3 {
+    display: grid;
+    grid-template-rows: repeat(2, 30px);
+    grid-template-columns: repeat(2, 100px);
+    padding: 25px;
+  
+}
+
+.header-group-3 > img {
+    grid-row: 1 / 2;
+    grid-column-start: 1;
+   
+}
+.header-group-3 > p {
+    grid-column-start: 2;
+    align-self: center;
+    grid-row: span 1;
+}
+.header-group-4 {
+grid-column: 2;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+
+}
+
+.text-size-small {
+    font-size: small;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.text-size-normal {
+    font-size: large;
+    font-weight: bold;
+}
+
+
+
+.profile-img {
+    width: 40px;               /* Set the width */
+    height: 40px;              /* Set the height */
+    border-radius: 50%;        /* Make it circular */
+    object-fit: cover;         /* Maintain aspect ratio */
+    margin-right: 10px;        /* Space between image and username */
+}
+
+
+.profile-img-bigger {
+    width: 80px;               /* Set the width */
+    height: 80px;              /* Set the height */
+    border-radius: 50%;        /* Make it circular */
+    object-fit: cover;         /* Maintain aspect ratio */
+    margin-right: 10px;        /* Space between image and username */
+}
+
 
 .content {
     border: dotted purple 4px;
