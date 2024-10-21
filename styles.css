@@ -6,9 +6,28 @@
 }
 
 .sidebar {
+    background-color: #34d399;
     border: dotted green 4px;
     grid-column: 1 / 3; /* Takes up the first two columns */
     grid-row: 1 / -1;   /* Spans all rows */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+}
+
+
+ul {
+    grid-row-start: 1;
+    list-style-type: none;
+}
+
+ul:nth-child(2) {
+    grid-row-start: 2;
+}
+
+li {
+    padding: 5px;
 }
 
 .header {
@@ -21,4 +40,11 @@
     border: dotted purple 4px;
     grid-column: 3;      /* Placed in the third column */
     grid-row: 2 / -1;    /* Starts right below the header */
+}
+
+.icon {
+    width: 24px;  /* Set the width */
+    height: 24px; /* Set the height */
+    vertical-align: middle; /* Aligns the icon vertically with text */
+    margin-right: 8px; /* Space between the icon and text */
 }
